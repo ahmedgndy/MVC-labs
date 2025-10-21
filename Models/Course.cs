@@ -1,17 +1,18 @@
 ﻿using Microsoft.Build.ObjectModelRemoting;
+using System.ComponentModel.DataAnnotations;
 
 namespace MVc.Models;
 
 public class Course
 {
-    public Guid Id { get; set; }
+    [Key]
+    public Guid Id { get; set; } = Guid.NewGuid();
     public string Name { get; set; }
 
     public string topic { get; set; }
-    public int degree { get; set; }
-   public float minDegree {  get; set; }
+    public int Degree { get; set; }
+   public float MinDegree {  get; set; }
 
-    public List<Instructor> instructors { get; set; }
+    public List<StudentCourseGrade> studentCourseGrades { get; set; }
 
-    public List<Course> Courses { get; set; }
 }

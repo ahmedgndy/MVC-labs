@@ -4,20 +4,26 @@ using MVc.Models;
 using MVc.Repositories;
 
 namespace MVc.Controllers;
-[Route("student")]
+
 public class StudentController(StudentRepository repo) : Controller
 {
     
     public IActionResult Index()
     {
-      var id = new Guid("7f4d6f43-5b82-4c68-9df1-9f2b5b07d4e0") ;
-       var student = repo.GetSudentByID(id);
-
-        return View(student); //helper methoud
+  
+      List<Student> students = repo.GetSudents();
+    
+      return View(students); //helper methoud
     }
 
+   public IActionResult Add()
+    {
+        return View();
+    }
 
-
-
-
+    public IActionResult AddnewStudent(Student student)
+    {
+        repo.Add(student);
+        return RedirectToAction("Index");
+    }
 }

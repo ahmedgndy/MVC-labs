@@ -1,8 +1,11 @@
-﻿namespace MVc.Models;
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace MVc.Models;
 
 public class CourseInstructorHours
 {
-    public int Id { get; set; }
+    [Key]
+    public Guid Id { get; set; } = Guid.NewGuid();
 
     public Guid InstructorId { get; set; }
     public Instructor Instructor { get; set; }

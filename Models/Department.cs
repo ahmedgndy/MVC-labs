@@ -1,14 +1,15 @@
 ﻿using Microsoft.Build.ObjectModelRemoting;
 using MVc.Enums;
+using System.ComponentModel.DataAnnotations;
 
 namespace MVc.Models;
 
 public class Department
 {
-    public Guid Id { get; set; }
+    [Key]
+    public Guid Id { get; set; } = Guid.NewGuid();
     public string Name { get; set; }
-    public string Manager { get; set; }
-
+    public String Manager { get; set; }
 
     public Branch Branche { get; set; }
 

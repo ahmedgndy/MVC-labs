@@ -4,16 +4,19 @@ using MVc.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
 
-namespace MVc.Context.Migrations
+namespace MVc.context.Migrations
 {
     [DbContext(typeof(SchoolContext))]
-    partial class ScoolContextModelSnapshot : ModelSnapshot
+    [Migration("20251021134915_schoolDbV2")]
+    partial class schoolDbV2
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -22,39 +25,24 @@ namespace MVc.Context.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("CourseInstructor", b =>
-                {
-                    b.Property<Guid>("CoursesId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid>("instructorsId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.HasKey("CoursesId", "instructorsId");
-
-                    b.HasIndex("instructorsId");
-
-                    b.ToTable("CourseInstructor");
-                });
-
             modelBuilder.Entity("MVc.Models.Course", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<Guid?>("CourseId")
+                    b.Property<int>("Degree")
+                        .HasColumnType("int");
+
+                    b.Property<Guid?>("InstructorId")
                         .HasColumnType("uniqueidentifier");
+
+                    b.Property<float>("MinDegree")
+                        .HasColumnType("real");
 
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("degree")
-                        .HasColumnType("int");
-
-                    b.Property<float>("minDegree")
-                        .HasColumnType("real");
 
                     b.Property<string>("topic")
                         .IsRequired()
@@ -62,18 +50,16 @@ namespace MVc.Context.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("CourseId");
+                    b.HasIndex("InstructorId");
 
                     b.ToTable("Courses");
                 });
 
             modelBuilder.Entity("MVc.Models.CourseInstructorHours", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<Guid>("CourseId")
                         .HasColumnType("uniqueidentifier");
@@ -158,9 +144,11 @@ namespace MVc.Context.Migrations
 
             modelBuilder.Entity("MVc.Models.Student", b =>
                 {
-                    b.Property<Guid>("Id")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Address")
                         .HasColumnType("nvarchar(max)");
@@ -181,67 +169,39 @@ namespace MVc.Context.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<Guid?>("StudentId")
-                        .HasColumnType("uniqueidentifier");
+                    b.Property<int?>("StudentCourseGradeId")
+                        .HasColumnType("int");
 
                     b.HasKey("Id");
 
                     b.HasIndex("DepartmentId");
-
-                    b.HasIndex("StudentId");
 
                     b.ToTable("Students");
                 });
 
             modelBuilder.Entity("MVc.Models.StudentCourseGrade", b =>
                 {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
+                    b.Property<int>("StudentId")
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
                     b.Property<Guid>("CourseId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid>("CouseId")
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<float>("Grade")
                         .HasColumnType("real");
 
-                    b.Property<Guid>("StudentId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.HasKey("Id");
+                    b.HasKey("StudentId", "CourseId");
 
                     b.HasIndex("CourseId");
-
-                    b.HasIndex("StudentId");
 
                     b.ToTable("StudentCourseGrades");
                 });
 
-            modelBuilder.Entity("CourseInstructor", b =>
-                {
-                    b.HasOne("MVc.Models.Course", null)
-                        .WithMany()
-                        .HasForeignKey("CoursesId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("MVc.Models.Instructor", null)
-                        .WithMany()
-                        .HasForeignKey("instructorsId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
             modelBuilder.Entity("MVc.Models.Course", b =>
                 {
-                    b.HasOne("MVc.Models.Course", null)
+                    b.HasOne("MVc.Models.Instructor", null)
                         .WithMany("Courses")
-                        .HasForeignKey("CourseId");
+                        .HasForeignKey("InstructorId");
                 });
 
             modelBuilder.Entity("MVc.Models.CourseInstructorHours", b =>
@@ -275,22 +235,18 @@ namespace MVc.Context.Migrations
                     b.HasOne("MVc.Models.Department", null)
                         .WithMany("Students")
                         .HasForeignKey("DepartmentId");
-
-                    b.HasOne("MVc.Models.Student", null)
-                        .WithMany("Course")
-                        .HasForeignKey("StudentId");
                 });
 
             modelBuilder.Entity("MVc.Models.StudentCourseGrade", b =>
                 {
                     b.HasOne("MVc.Models.Course", "Course")
-                        .WithMany()
+                        .WithMany("studentCourseGrades")
                         .HasForeignKey("CourseId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("MVc.Models.Student", "Student")
-                        .WithMany()
+                        .WithMany("Grads")
                         .HasForeignKey("StudentId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -302,7 +258,7 @@ namespace MVc.Context.Migrations
 
             modelBuilder.Entity("MVc.Models.Course", b =>
                 {
-                    b.Navigation("Courses");
+                    b.Navigation("studentCourseGrades");
                 });
 
             modelBuilder.Entity("MVc.Models.Department", b =>
@@ -312,9 +268,14 @@ namespace MVc.Context.Migrations
                     b.Navigation("Students");
                 });
 
+            modelBuilder.Entity("MVc.Models.Instructor", b =>
+                {
+                    b.Navigation("Courses");
+                });
+
             modelBuilder.Entity("MVc.Models.Student", b =>
                 {
-                    b.Navigation("Course");
+                    b.Navigation("Grads");
                 });
 #pragma warning restore 612, 618
         }

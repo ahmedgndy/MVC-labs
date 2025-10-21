@@ -3,7 +3,7 @@ using MVc.Models;
 
 namespace MVc.Context
 {
-    public class SchoolContext:DbContext
+    public class SchoolContext : DbContext
     {
 
 
@@ -18,5 +18,15 @@ namespace MVc.Context
             optionsBuilder.UseSqlServer("Server=(localdb)\\MSSQLLocalDB;Database=SchoolDB;Trusted_Connection=True;Encrypt=False;");
         }
 
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<StudentCourseGrade>()
+                .HasKey(scg => new { scg.StudentId, scg.CourseId }); // composite key
+                                                                     //
+
+
+        }
     }
 }
+
+

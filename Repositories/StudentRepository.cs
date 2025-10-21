@@ -1,12 +1,12 @@
 ﻿using MVc.Context;
-using MVc.Context.Migrations;
 using MVc.Models;
+using System.Runtime.CompilerServices;
 
 namespace MVc.Repositories
 {
     public class StudentRepository(SchoolContext context )
     {
-       public Student GetSudentByID(Guid id)
+       public Student GetSudentByID(int id)
         {
             var student = context.Students.FirstOrDefault( s => s.Id == id );
             if (student == null) {
@@ -22,8 +22,14 @@ namespace MVc.Repositories
             {
                 throw new Exception($"Can not find student with id ");
             }
-
+            Console.WriteLine(students.Count);
             return students;
+        }
+
+     public void Add(Student student)
+        {
+            context.Add<Student>(student);
+            context.SaveChanges();
         }
     }
 

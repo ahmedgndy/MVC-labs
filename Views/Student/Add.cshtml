@@ -1,0 +1,47 @@
+﻿@using MVc.Enums
+
+@{
+    Layout = "_layout";
+
+    ViewData["Title"] = "Studend";
+}
+@{
+    var addresses = Enum.GetValues(typeof(Branch));
+}
+
+
+<form class="m-5" action="/student/AddnewStudent">
+    <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" id="email" aria-describedby="emailHelp" name="Name" required>
+    </div>
+
+    <div class="form-group">
+        <label for="Age">Age</label>
+        <input type="text" class="form-control" id="email"  name="age" required>
+    </div>
+
+    <div class="form-group">
+        <label for="address">address</label>
+        <select class="form-select" aria-label="Address"  name="Address"required>
+            <option selected>Cairo</option>
+            @foreach (var address in addresses)
+            {
+                <option value="1">@address</option>
+            }
+
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="email">Email address</label>
+        <input type="email" class="form-control" id="email" aria-describedby="emailHelp"  name = "Email" placeholder="Enter email">
+        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    </div>
+    <div class="form-group">
+        <label for="Image">Image linke</label>
+        <input type="url" class="form-control" id="Image" name="Image" required>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Add</button>
+</form>

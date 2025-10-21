@@ -3,84 +3,40 @@
   "WorkspaceRootPath": "C:\\Users\\El-Wattaneya\\Desktop\\WebApplication1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\El-Wattaneya\\Desktop\\WebApplication1\\Context\\Migrations\\20251021103609_schoolDbV1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Context\\Migrations\\20251021103609_schoolDbV1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{02DCA297-8DC7-402C-9246-DF08CBA8A77E}|MVc.csproj|c:\\users\\el-wattaneya\\desktop\\webapplication1\\views\\student\\add.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{02DCA297-8DC7-402C-9246-DF08CBA8A77E}|MVc.csproj|solutionrelative:views\\student\\add.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{02DCA297-8DC7-402C-9246-DF08CBA8A77E}|MVc.csproj|c:\\users\\el-wattaneya\\desktop\\webapplication1\\models\\studentcoursegrade.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{02DCA297-8DC7-402C-9246-DF08CBA8A77E}|MVc.csproj|solutionrelative:models\\studentcoursegrade.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{02DCA297-8DC7-402C-9246-DF08CBA8A77E}|MVc.csproj|c:\\users\\el-wattaneya\\desktop\\webapplication1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{02DCA297-8DC7-402C-9246-DF08CBA8A77E}|MVc.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{02DCA297-8DC7-402C-9246-DF08CBA8A77E}|MVc.csproj|c:\\users\\el-wattaneya\\desktop\\webapplication1\\models\\courseinstructorhours.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{02DCA297-8DC7-402C-9246-DF08CBA8A77E}|MVc.csproj|solutionrelative:models\\courseinstructorhours.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{02DCA297-8DC7-402C-9246-DF08CBA8A77E}|MVc.csproj|c:\\users\\el-wattaneya\\desktop\\webapplication1\\models\\department.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{02DCA297-8DC7-402C-9246-DF08CBA8A77E}|MVc.csproj|solutionrelative:models\\department.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{02DCA297-8DC7-402C-9246-DF08CBA8A77E}|MVc.csproj|c:\\users\\el-wattaneya\\desktop\\webapplication1\\models\\instructor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{02DCA297-8DC7-402C-9246-DF08CBA8A77E}|MVc.csproj|solutionrelative:models\\instructor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{02DCA297-8DC7-402C-9246-DF08CBA8A77E}|MVc.csproj|c:\\users\\el-wattaneya\\desktop\\webapplication1\\enums\\branches.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{02DCA297-8DC7-402C-9246-DF08CBA8A77E}|MVc.csproj|solutionrelative:enums\\branches.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{02DCA297-8DC7-402C-9246-DF08CBA8A77E}|MVc.csproj|c:\\users\\el-wattaneya\\desktop\\webapplication1\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{02DCA297-8DC7-402C-9246-DF08CBA8A77E}|MVc.csproj|solutionrelative:models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{02DCA297-8DC7-402C-9246-DF08CBA8A77E}|MVc.csproj|c:\\users\\el-wattaneya\\desktop\\webapplication1\\models\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{02DCA297-8DC7-402C-9246-DF08CBA8A77E}|MVc.csproj|solutionrelative:models\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{02DCA297-8DC7-402C-9246-DF08CBA8A77E}|MVc.csproj|c:\\users\\el-wattaneya\\desktop\\webapplication1\\models\\course.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{02DCA297-8DC7-402C-9246-DF08CBA8A77E}|MVc.csproj|solutionrelative:models\\course.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{02DCA297-8DC7-402C-9246-DF08CBA8A77E}|MVc.csproj|c:\\users\\el-wattaneya\\desktop\\webapplication1\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{02DCA297-8DC7-402C-9246-DF08CBA8A77E}|MVc.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{02DCA297-8DC7-402C-9246-DF08CBA8A77E}|MVc.csproj|c:\\users\\el-wattaneya\\desktop\\webapplication1\\mvc.csproj.backup.tmp||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{02DCA297-8DC7-402C-9246-DF08CBA8A77E}|MVc.csproj|solutionrelative:mvc.csproj.backup.tmp||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{02DCA297-8DC7-402C-9246-DF08CBA8A77E}|MVc.csproj|c:\\users\\el-wattaneya\\desktop\\webapplication1\\views\\_viewimports1.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{02DCA297-8DC7-402C-9246-DF08CBA8A77E}|MVc.csproj|solutionrelative:views\\_viewimports1.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{02DCA297-8DC7-402C-9246-DF08CBA8A77E}|MVc.csproj|c:\\users\\el-wattaneya\\desktop\\webapplication1\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{02DCA297-8DC7-402C-9246-DF08CBA8A77E}|MVc.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{02DCA297-8DC7-402C-9246-DF08CBA8A77E}|MVc.csproj|c:\\users\\el-wattaneya\\desktop\\webapplication1\\views\\shared\\_authlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{02DCA297-8DC7-402C-9246-DF08CBA8A77E}|MVc.csproj|solutionrelative:views\\shared\\_authlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{02DCA297-8DC7-402C-9246-DF08CBA8A77E}|MVc.csproj|c:\\users\\el-wattaneya\\desktop\\webapplication1\\views\\home\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{02DCA297-8DC7-402C-9246-DF08CBA8A77E}|MVc.csproj|solutionrelative:views\\home\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{02DCA297-8DC7-402C-9246-DF08CBA8A77E}|MVc.csproj|c:\\users\\el-wattaneya\\desktop\\webapplication1\\views\\home\\aboutus.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{02DCA297-8DC7-402C-9246-DF08CBA8A77E}|MVc.csproj|solutionrelative:views\\home\\aboutus.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{02DCA297-8DC7-402C-9246-DF08CBA8A77E}|MVc.csproj|c:\\users\\el-wattaneya\\desktop\\webapplication1\\repositories\\studentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{02DCA297-8DC7-402C-9246-DF08CBA8A77E}|MVc.csproj|solutionrelative:repositories\\studentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{02DCA297-8DC7-402C-9246-DF08CBA8A77E}|MVc.csproj|c:\\users\\el-wattaneya\\desktop\\webapplication1\\views\\student\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{02DCA297-8DC7-402C-9246-DF08CBA8A77E}|MVc.csproj|solutionrelative:views\\student\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{02DCA297-8DC7-402C-9246-DF08CBA8A77E}|MVc.csproj|c:\\users\\el-wattaneya\\desktop\\webapplication1\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{02DCA297-8DC7-402C-9246-DF08CBA8A77E}|MVc.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{02DCA297-8DC7-402C-9246-DF08CBA8A77E}|MVc.csproj|c:\\users\\el-wattaneya\\desktop\\webapplication1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{02DCA297-8DC7-402C-9246-DF08CBA8A77E}|MVc.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{02DCA297-8DC7-402C-9246-DF08CBA8A77E}|MVc.csproj|c:\\users\\el-wattaneya\\desktop\\webapplication1\\controllers\\studentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{02DCA297-8DC7-402C-9246-DF08CBA8A77E}|MVc.csproj|solutionrelative:controllers\\studentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{02DCA297-8DC7-402C-9246-DF08CBA8A77E}|MVc.csproj|c:\\users\\el-wattaneya\\desktop\\webapplication1\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{02DCA297-8DC7-402C-9246-DF08CBA8A77E}|MVc.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{02DCA297-8DC7-402C-9246-DF08CBA8A77E}|MVc.csproj|c:\\users\\el-wattaneya\\desktop\\webapplication1\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{02DCA297-8DC7-402C-9246-DF08CBA8A77E}|MVc.csproj|solutionrelative:properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{02DCA297-8DC7-402C-9246-DF08CBA8A77E}|MVc.csproj|c:\\users\\el-wattaneya\\desktop\\webapplication1\\mvc.csproj.backup.tmp||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{02DCA297-8DC7-402C-9246-DF08CBA8A77E}|MVc.csproj|solutionrelative:mvc.csproj.backup.tmp||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{02DCA297-8DC7-402C-9246-DF08CBA8A77E}|MVc.csproj|c:\\users\\el-wattaneya\\desktop\\webapplication1\\models\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{02DCA297-8DC7-402C-9246-DF08CBA8A77E}|MVc.csproj|solutionrelative:models\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -90,46 +46,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 6,
           "Children": [
             {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "20251021103609_schoolDbV1.cs",
-              "DocumentMoniker": "C:\\Users\\El-Wattaneya\\Desktop\\WebApplication1\\Context\\Migrations\\20251021103609_schoolDbV1.cs",
-              "RelativeDocumentMoniker": "Context\\Migrations\\20251021103609_schoolDbV1.cs",
-              "ToolTip": "C:\\Users\\El-Wattaneya\\Desktop\\WebApplication1\\Context\\Migrations\\20251021103609_schoolDbV1.cs",
-              "RelativeToolTip": "Context\\Migrations\\20251021103609_schoolDbV1.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-21T10:36:11.244Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Branches.cs",
-              "DocumentMoniker": "C:\\Users\\El-Wattaneya\\Desktop\\WebApplication1\\Enums\\Branches.cs",
-              "RelativeDocumentMoniker": "Enums\\Branches.cs",
-              "ToolTip": "C:\\Users\\El-Wattaneya\\Desktop\\WebApplication1\\Enums\\Branches.cs",
-              "RelativeToolTip": "Enums\\Branches.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-21T10:28:07.291Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "ErrorViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\El-Wattaneya\\Desktop\\WebApplication1\\Models\\ErrorViewModel.cs",
-              "RelativeDocumentMoniker": "Models\\ErrorViewModel.cs",
-              "ToolTip": "C:\\Users\\El-Wattaneya\\Desktop\\WebApplication1\\Models\\ErrorViewModel.cs",
-              "RelativeToolTip": "Models\\ErrorViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-21T10:23:59.338Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
             },
             {
               "$type": "Document",
@@ -139,75 +60,29 @@
               "RelativeDocumentMoniker": "Models\\student.cs",
               "ToolTip": "C:\\Users\\El-Wattaneya\\Desktop\\WebApplication1\\Models\\student.cs",
               "RelativeToolTip": "Models\\student.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAeAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABIAAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-21T10:17:22.229Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "StudentCourseGrade.cs",
-              "DocumentMoniker": "C:\\Users\\El-Wattaneya\\Desktop\\WebApplication1\\Models\\StudentCourseGrade.cs",
-              "RelativeDocumentMoniker": "Models\\StudentCourseGrade.cs",
-              "ToolTip": "C:\\Users\\El-Wattaneya\\Desktop\\WebApplication1\\Models\\StudentCourseGrade.cs",
-              "RelativeToolTip": "Models\\StudentCourseGrade.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-21T10:11:42.47Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Course.cs",
-              "DocumentMoniker": "C:\\Users\\El-Wattaneya\\Desktop\\WebApplication1\\Models\\Course.cs",
-              "RelativeDocumentMoniker": "Models\\Course.cs",
-              "ToolTip": "C:\\Users\\El-Wattaneya\\Desktop\\WebApplication1\\Models\\Course.cs",
-              "RelativeToolTip": "Models\\Course.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-21T10:09:17.852Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "CourseInstructorHours.cs",
-              "DocumentMoniker": "C:\\Users\\El-Wattaneya\\Desktop\\WebApplication1\\Models\\CourseInstructorHours.cs",
-              "RelativeDocumentMoniker": "Models\\CourseInstructorHours.cs",
-              "ToolTip": "C:\\Users\\El-Wattaneya\\Desktop\\WebApplication1\\Models\\CourseInstructorHours.cs",
-              "RelativeToolTip": "Models\\CourseInstructorHours.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-21T10:06:45.361Z",
+              "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "Instructor.cs",
-              "DocumentMoniker": "C:\\Users\\El-Wattaneya\\Desktop\\WebApplication1\\Models\\Instructor.cs",
-              "RelativeDocumentMoniker": "Models\\Instructor.cs",
-              "ToolTip": "C:\\Users\\El-Wattaneya\\Desktop\\WebApplication1\\Models\\Instructor.cs",
-              "RelativeToolTip": "Models\\Instructor.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABIAAAAZAAAAAAAAAA==",
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\El-Wattaneya\\Desktop\\WebApplication1\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\El-Wattaneya\\Desktop\\WebApplication1\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-21T10:01:37.288Z",
+              "WhenOpened": "2025-10-20T13:00:07.527Z",
+              "IsPinned": true,
               "EditorCaption": ""
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Department.cs",
-              "DocumentMoniker": "C:\\Users\\El-Wattaneya\\Desktop\\WebApplication1\\Models\\Department.cs",
-              "RelativeDocumentMoniker": "Models\\Department.cs",
-              "ToolTip": "C:\\Users\\El-Wattaneya\\Desktop\\WebApplication1\\Models\\Department.cs",
-              "RelativeToolTip": "Models\\Department.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-21T09:59:37.759Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
             },
             {
               "$type": "Bookmark",
@@ -218,148 +93,92 @@
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
-            },
-            {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "_ViewImports1.cshtml",
-              "DocumentMoniker": "C:\\Users\\El-Wattaneya\\Desktop\\WebApplication1\\Views\\_ViewImports1.cshtml",
-              "RelativeDocumentMoniker": "Views\\_ViewImports1.cshtml",
-              "ToolTip": "C:\\Users\\El-Wattaneya\\Desktop\\WebApplication1\\Views\\_ViewImports1.cshtml",
-              "RelativeToolTip": "Views\\_ViewImports1.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "Add.cshtml",
+              "DocumentMoniker": "C:\\Users\\El-Wattaneya\\Desktop\\WebApplication1\\Views\\Student\\Add.cshtml",
+              "RelativeDocumentMoniker": "Views\\Student\\Add.cshtml",
+              "ToolTip": "C:\\Users\\El-Wattaneya\\Desktop\\WebApplication1\\Views\\Student\\Add.cshtml",
+              "RelativeToolTip": "Views\\Student\\Add.cshtml",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAAA8AAABrAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-10-20T13:50:58.695Z",
+              "WhenOpened": "2025-10-21T15:16:37.751Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "_AuthLayout.cshtml",
-              "DocumentMoniker": "C:\\Users\\El-Wattaneya\\Desktop\\WebApplication1\\Views\\Shared\\_AuthLayout.cshtml",
-              "RelativeDocumentMoniker": "Views\\Shared\\_AuthLayout.cshtml",
-              "ToolTip": "C:\\Users\\El-Wattaneya\\Desktop\\WebApplication1\\Views\\Shared\\_AuthLayout.cshtml",
-              "RelativeToolTip": "Views\\Shared\\_AuthLayout.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-10-20T13:31:30.543Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "Login.cshtml",
-              "DocumentMoniker": "C:\\Users\\El-Wattaneya\\Desktop\\WebApplication1\\Views\\Home\\Login.cshtml",
-              "RelativeDocumentMoniker": "Views\\Home\\Login.cshtml",
-              "ToolTip": "C:\\Users\\El-Wattaneya\\Desktop\\WebApplication1\\Views\\Home\\Login.cshtml",
-              "RelativeToolTip": "Views\\Home\\Login.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-10-20T13:31:09.655Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\El-Wattaneya\\Desktop\\WebApplication1\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\El-Wattaneya\\Desktop\\WebApplication1\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-10-20T13:19:17.423Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "AboutUs.cshtml",
-              "DocumentMoniker": "C:\\Users\\El-Wattaneya\\Desktop\\WebApplication1\\Views\\Home\\AboutUs.cshtml",
-              "RelativeDocumentMoniker": "Views\\Home\\AboutUs.cshtml",
-              "ToolTip": "C:\\Users\\El-Wattaneya\\Desktop\\WebApplication1\\Views\\Home\\AboutUs.cshtml",
-              "RelativeToolTip": "Views\\Home\\AboutUs.cshtml",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-10-20T13:04:52.312Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "C:\\Users\\El-Wattaneya\\Desktop\\WebApplication1\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
-              "ToolTip": "C:\\Users\\El-Wattaneya\\Desktop\\WebApplication1\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "Controllers\\HomeController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-20T13:00:07.527Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\El-Wattaneya\\Desktop\\WebApplication1\\Views\\Student\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Student\\Index.cshtml",
-              "ToolTip": "C:\\Users\\El-Wattaneya\\Desktop\\WebApplication1\\Views\\Student\\Index.cshtml",
-              "RelativeToolTip": "Views\\Student\\Index.cshtml",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAUAAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-10-20T12:16:25.769Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "StudentController.cs",
-              "DocumentMoniker": "C:\\Users\\El-Wattaneya\\Desktop\\WebApplication1\\Controllers\\StudentController.cs",
-              "RelativeDocumentMoniker": "Controllers\\StudentController.cs",
-              "ToolTip": "C:\\Users\\El-Wattaneya\\Desktop\\WebApplication1\\Controllers\\StudentController.cs",
-              "RelativeToolTip": "Controllers\\StudentController.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA0AAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-20T12:15:53.16Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\El-Wattaneya\\Desktop\\WebApplication1\\appsettings.json",
-              "RelativeDocumentMoniker": "appsettings.json",
-              "ToolTip": "C:\\Users\\El-Wattaneya\\Desktop\\WebApplication1\\appsettings.json",
-              "RelativeToolTip": "appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 6,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\El-Wattaneya\\Desktop\\WebApplication1\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\El-Wattaneya\\Desktop\\WebApplication1\\Properties\\launchSettings.json",
+              "RelativeToolTip": "Properties\\launchSettings.json",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAkAAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-10-20T12:04:54.862Z",
+              "WhenOpened": "2025-10-21T14:58:34.022Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 7,
               "Title": "MVc.csproj.Backup.tmp",
               "DocumentMoniker": "C:\\Users\\El-Wattaneya\\Desktop\\WebApplication1\\MVc.csproj.Backup.tmp",
               "RelativeDocumentMoniker": "MVc.csproj.Backup.tmp",
               "ToolTip": "C:\\Users\\El-Wattaneya\\Desktop\\WebApplication1\\MVc.csproj.Backup.tmp",
               "RelativeToolTip": "MVc.csproj.Backup.tmp",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAAAAgAAAADAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-10-20T12:04:37Z",
+              "WhenOpened": "2025-10-21T14:58:10.929Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "StudentRepository.cs",
+              "DocumentMoniker": "C:\\Users\\El-Wattaneya\\Desktop\\WebApplication1\\Repositories\\StudentRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\StudentRepository.cs",
+              "ToolTip": "C:\\Users\\El-Wattaneya\\Desktop\\WebApplication1\\Repositories\\StudentRepository.cs",
+              "RelativeToolTip": "Repositories\\StudentRepository.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAuwB8AAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-21T14:07:30.685Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\El-Wattaneya\\Desktop\\WebApplication1\\Views\\Student\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Student\\Index.cshtml",
+              "ToolTip": "C:\\Users\\El-Wattaneya\\Desktop\\WebApplication1\\Views\\Student\\Index.cshtml",
+              "RelativeToolTip": "Views\\Student\\Index.cshtml",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAMwAsAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-21T14:01:37.976Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "StudentController.cs",
+              "DocumentMoniker": "C:\\Users\\El-Wattaneya\\Desktop\\WebApplication1\\Controllers\\StudentController.cs",
+              "RelativeDocumentMoniker": "Controllers\\StudentController.cs",
+              "ToolTip": "C:\\Users\\El-Wattaneya\\Desktop\\WebApplication1\\Controllers\\StudentController.cs",
+              "RelativeToolTip": "Controllers\\StudentController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-21T14:01:27.166Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\El-Wattaneya\\Desktop\\WebApplication1\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Users\\El-Wattaneya\\Desktop\\WebApplication1\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACcAAAAmAAAAAAAAAA==",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAACoAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-20T11:59:18.271Z",
               "EditorCaption": ""
