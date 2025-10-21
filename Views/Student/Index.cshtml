@@ -1,0 +1,34 @@
+﻿@model MVc.Models.Student
+
+@{
+    Layout = "_layout";
+
+    ViewData["Title"] = "Studend ";
+}
+
+<body class="bg-light">
+    <div class="container mt-5">
+        <h1 class="mb-4 text-center">Student Details</h1>
+
+        <div class="card mx-auto shadow" style="width: 22rem;">
+            <img class="card-img-top" src="@Model.Image" alt="@Model.Name" style="height: 250px; object-fit: cover;">
+
+            <div class="card-body text-center">
+                <h5 class="card-title">@Model.Name</h5>
+                <p class="card-text text-muted">@Model.Email</p>
+            </div>
+
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item"><strong>Age:</strong> @Model.Age</li>
+                <li class="list-group-item"><strong>Address:</strong> @Model.Address</li>
+                <li class="list-group-item"><strong>ID:</strong> @Model.Id</li>
+            </ul>
+
+            <div class="card-body text-center">
+                <a href="mailto:@Model.Email" class="btn btn-primary">Contact</a>
+                <a href="/" class="btn btn-secondary">Back to List</a>
+            </div>
+        </div>
+    </div>
+
+</body>
