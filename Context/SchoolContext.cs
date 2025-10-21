@@ -20,7 +20,10 @@ namespace MVc.Context
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-        
+            modelBuilder.Entity<StudentCourseGrade>()
+                .HasKey(scg => new { scg.StudentId, scg.CourseId }); // composite key
+                                                                  
+
         }
     }
 }

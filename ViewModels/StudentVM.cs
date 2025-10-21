@@ -17,7 +17,7 @@ public class StudentVM
         {
             Name = vm.Name,
             Address = vm.Address,
-            Image = vm.Address,
+            Image = vm.Image,
             Email = vm.Email
         };
     }

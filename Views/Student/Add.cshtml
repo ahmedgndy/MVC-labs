@@ -1,4 +1,5 @@
 ﻿@using MVc.Enums
+@using MVc.ViewModels
 
 @{
     Layout = "_layout";
@@ -7,24 +8,29 @@
 }
 @{
     var addresses = Enum.GetValues(typeof(Branch));
+
 }
 
+@model StudentVM
 
-<form class="m-5" action="/student/AddnewStudent">
+
+<form class="m-5" action="/student/AddnewStudent" method="post">
     <div class="form-group">
         <label for="name">Name</label>
-        <input type="text" class="form-control" id="email" aria-describedby="emailHelp" name="Name" required>
+        <input type="text" class="form-control"  value="@Model?.Name"  id="email" aria-describedby="emailHelp" name="Name">
     </div>
 
     <div class="form-group">
         <label for="Age">Age</label>
-        <input type="text" class="form-control" id="email"  name="age" required>
+        <input type="text" class="form-control" value="@Model?.Age"  id="email" name="age" required>
     </div>
 
     <div class="form-group">
         <label for="address">address</label>
         <select class="form-select" aria-label="Address"  name="Address"required>
-            <option selected>Cairo</option>
+            <option selected>
+                @Model?.Address
+            </option>
             @foreach (var address in addresses)
             {
                 <option value="@address">@address</option>
@@ -35,12 +41,12 @@
 
     <div class="form-group">
         <label for="email">Email address</label>
-        <input type="email" class="form-control" id="email" aria-describedby="emailHelp"  name = "Email" placeholder="Enter email">
+        <input type="email" class="form-control" id="email" value= "@Model?.Email" aria-describedby="emailHelp"  name = "Email" placeholder="Enter email">
         <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
     </div>
     <div class="form-group">
         <label for="Image">Image linke</label>
-        <input type="url" class="form-control" id="Image" name="Image" required>
+        <input type="url" value="@Model?.Image"  class="form-control" id="Image" name="Image" required>
     </div>
 
     <button type="submit" class="btn btn-primary">Add</button>

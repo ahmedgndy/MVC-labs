@@ -1,4 +1,5 @@
-﻿using MVc.Context;
+﻿using Microsoft.AspNetCore.Mvc;
+using MVc.Context;
 using MVc.Models;
 using MVc.ViewModels;
 using System.Runtime.CompilerServices;
@@ -27,7 +28,8 @@ namespace MVc.Repositories
             return students;
         }
 
-     public void Add(StudentVM studentvm)
+        
+        public void Add(StudentVM studentvm)
         {
             var studetn = StudentVM.ToModel(studentvm);
             context.Add<Student>(studetn);

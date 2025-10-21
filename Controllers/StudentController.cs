@@ -22,9 +22,14 @@ public class StudentController(StudentRepository repo) : Controller
         return View();
     }
 
+
+    [HttpPost]
     public IActionResult AddnewStudent(StudentVM studentvm)
     {
-        repo.Add(studentvm);
-        return RedirectToAction("Index");
+        if (studentvm.Name is not null) { 
+            repo.Add(studentvm);
+            return RedirectToAction("Index");
+        }
+        return View("Add",studentvm);
     }
 }
