@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using MVc.Models;
 using MVc.Repositories;
+using MVc.ViewModels;
 
 namespace MVc.Controllers;
 
@@ -21,9 +22,9 @@ public class StudentController(StudentRepository repo) : Controller
         return View();
     }
 
-    public IActionResult AddnewStudent(Student student)
+    public IActionResult AddnewStudent(StudentVM studentvm)
     {
-        repo.Add(student);
+        repo.Add(studentvm);
         return RedirectToAction("Index");
     }
 }

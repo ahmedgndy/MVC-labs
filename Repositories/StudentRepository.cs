@@ -1,5 +1,6 @@
 ﻿using MVc.Context;
 using MVc.Models;
+using MVc.ViewModels;
 using System.Runtime.CompilerServices;
 
 namespace MVc.Repositories
@@ -26,9 +27,10 @@ namespace MVc.Repositories
             return students;
         }
 
-     public void Add(Student student)
+     public void Add(StudentVM studentvm)
         {
-            context.Add<Student>(student);
+            var studetn = StudentVM.ToModel(studentvm);
+            context.Add<Student>(studetn);
             context.SaveChanges();
         }
     }
