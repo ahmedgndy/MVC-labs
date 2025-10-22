@@ -1,4 +1,5 @@
 ﻿@using MVc.Enums
+@using MVc.Models
 @using MVc.ViewModels
 
 @{
@@ -38,6 +39,19 @@
 
         </select>
     </div>
+    <div class="form-group">
+        <label for="address">Department</label>
+        <select class="form-select" aria-label="Address" name="Address" required>
+            <option selected>
+                @Model?.Address
+            </option>
+            @foreach (var address in addresses)
+            {
+                <option value="@address">@address</option>
+            }
+
+        </select>
+    </div>
 
     <div class="form-group">
         <label for="email">Email address</label>
@@ -47,6 +61,23 @@
     <div class="form-group">
         <label for="Image">Image linke</label>
         <input type="url" value="@Model?.Image"  class="form-control" id="Image" name="Image" required>
+    </div>
+
+    <div class="form-group">
+        <label for="checkbox"> Enored Coursed </label>
+
+        @for (var i = 0 ; i < Model.Courses.Count() ; i++)
+        {
+
+            <input class="form-check-input" type="checkbox" id="flexCheckDefault" asp-for="Courses[i].IsSelected" " ) />
+            <label class="form-check-label" for="flexCheckDefault">
+                @Model.Courses[i].Name 
+            </label>
+
+            <!-- Hidden fields for Id and Name so they post back -->
+            <input type="hidden" asp-for="Courses[i].Id" />
+            <input type="hidden" asp-for="Courses[i].Name" />
+        }
     </div>
 
     <button type="submit" class="btn btn-primary">Add</button>

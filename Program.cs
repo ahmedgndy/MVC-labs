@@ -16,6 +16,8 @@ namespace WebApplication1
             builder.Services.AddControllersWithViews();
             builder.Services.AddSingleton<SchoolContext, SchoolContext>();
             builder.Services.AddSingleton<StudentRepository, StudentRepository>();
+            builder.Services.AddSingleton<CourseRepository, CourseRepository>();
+
 
 
             var app = builder.Build();

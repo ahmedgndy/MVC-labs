@@ -11,6 +11,7 @@ public class StudentVM
     public string? Image { get; set; }
     public string? Email { get; set; }
 
+    public List<CourseCheckBox> Courses { get; set; }
     public static Student ToModel(StudentVM vm)
     {
         return new Student

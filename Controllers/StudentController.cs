@@ -6,28 +6,40 @@ using MVc.ViewModels;
 
 namespace MVc.Controllers;
 
-public class StudentController(StudentRepository repo) : Controller
+public class StudentController(StudentRepository Srepo , CourseRepository Courserepo) : Controller
 {
     
     public IActionResult Index()
     {
   
-      List<Student> students = repo.GetSudents();
-    
+      List<Student> students = Srepo.GetSudents();
+      
       return View(students); //helper methoud
     }
 
    public IActionResult Add()
+    
     {
-        return View();
+        var Courses = Courserepo.GetAllCourses();
+        var model = new StudentVM();
+         List<CourseCheckBox> checkedcoursed = [] ;
+        foreach(var course in Courses)
+        {
+            var checkBox = new CourseCheckBox();
+            checkBox.Id = course.Id;
+            checkBox.Name = course.Name;
+            checkedcoursed.Add(checkBox);
+        }
+        model.Courses = checkedcoursed;
+        return View(model);
     }
 
 
     [HttpPost]
     public IActionResult AddnewStudent(StudentVM studentvm)
     {
-        if (studentvm.Name is not null) { 
-            repo.Add(studentvm);
+        if (studentvm.Name is not null) {
+            Srepo.Add(studentvm);
             return RedirectToAction("Index");
         }
         return View("Add",studentvm);
