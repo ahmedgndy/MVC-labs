@@ -15,7 +15,7 @@ namespace WebApplication1
             // Add services to the container. ID
             builder.Services.AddControllersWithViews();
             builder.Services.AddSingleton<SchoolContext, SchoolContext>();
-            builder.Services.AddSingleton<StudentRepository, StudentRepository>();
+            builder.Services.AddScoped<StudentRepository, StudentRepository>();
             builder.Services.AddSingleton<CourseRepository, CourseRepository>();
 
 

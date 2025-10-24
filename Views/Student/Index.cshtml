@@ -27,20 +27,22 @@
                 <th scope="col">Address</th>
                 <th scope="col">Email</th>
                 <th scope="col">Edit </th>
-                <th scope="col">Remove </th>
+              
                
             </tr>
         </thead>
         <tbody>
-             @foreach (var studnet in (List<Student>)Model)
+             @foreach (var s in (List<Student>)Model)
                 {
                     <tr>
-                        <th scope="row">@studnet.Id</th>
-                        <td>@studnet.Name</td>
-                        <td>@studnet.Address</td>
-                        <td>@studnet.Email</td>
-						<td><button type="button" class="btn btn-primary"> Edite </button></td>
-						<td><button type="button" class="btn btn-danger"> Remove </button></td>
+                        <th scope="row">@s.Id</th>
+                        <td>@s.Name</td>
+                        <td>@s.Address</td>
+                        <td>@s.Email</td>
+                        <td>
+                            <a ass="btn btn-primary" asp-for="" asp-action="Edit" asp-controller="student" asp-route-id="@s.Id
+"> Edite</a> </td>
+					
                         
 
                     </tr>

@@ -29,10 +29,25 @@ public class StudentRepository(SchoolContext context )
     }
 
     
-    public void Add(StudentVM studentvm)
+    public void Add(Stduent studentvm)
     {
-        var studetn = StudentVM.ToModel(studentvm);
+        var studetn = Stduent.ToModel(studentvm);
         context.Add<Student>(studetn);
+        context.SaveChanges();
+    }
+
+    public void Edit(Student updatedStudent)
+    {
+      if (updatedStudent == null) {
+            throw new Exception("Student object is null");
+      }
+      var existing = context.Students.FirstOrDefault(s => updatedStudent.Id == s.Id);
+      if (existing is null) return;
+        existing.Name = updatedStudent.Name;
+        existing.Address = updatedStudent.Address;
+        existing.Age = updatedStudent.Age;
+        existing.Image = updatedStudent.Image;
+        existing.Email = updatedStudent.Email;
         context.SaveChanges();
     }
 

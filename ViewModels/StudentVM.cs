@@ -1,18 +1,23 @@
 ﻿using MVc.Models;
+using System.ComponentModel.DataAnnotations;
 
 namespace MVc.ViewModels;
 
-public class StudentVM
+public class Stduent
 {
-    public string Name { get; set; }
 
-    public int Age { get; set; }
+    [Display(Name = "Full Name")]
+    public  string Name { get; set; }
+
+    public  int Age { get; set; }
     public string? Address { get; set; }
     public string? Image { get; set; }
+    [DataType(DataType.EmailAddress)]
     public string? Email { get; set; }
 
-    public List<CourseCheckBox> Courses { get; set; }
-    public static Student ToModel(StudentVM vm)
+    public List<CourseCheckBox>? Courses { get; set; }
+
+    public static Student ToModel(Stduent vm)
     {
         return new Student
         {

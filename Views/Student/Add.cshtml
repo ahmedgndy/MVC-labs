@@ -12,23 +12,23 @@
 
 }
 
-@model StudentVM
+@model Stduent
 
 
 <form class="m-5" action="/student/AddnewStudent" method="post">
     <div class="form-group">
-        <label for="name">Name</label>
-        <input type="text" class="form-control"  value="@Model?.Name"  id="email" aria-describedby="emailHelp" name="Name">
+        <label  asp-for="Name" ></label>
+        <input  class="form-control" asp-for="Name"  aria-describedby="emailHelp">
     </div>
 
     <div class="form-group">
-        <label for="Age">Age</label>
-        <input type="text" class="form-control" value="@Model?.Age"  id="email" name="age" required>
+        <label for="Age"> Age </label>
+        <input class="form-control" asp-for="Age"  required>
     </div>
 
     <div class="form-group">
         <label for="address">address</label>
-        <select class="form-select" aria-label="Address"  name="Address"required>
+        <select class="form-select" aria-label="Address" asp-for="Address" required>
             <option selected>
                 @Model?.Address
             </option>
@@ -39,28 +39,15 @@
 
         </select>
     </div>
-    <div class="form-group">
-        <label for="address">Department</label>
-        <select class="form-select" aria-label="Address" name="Address" required>
-            <option selected>
-                @Model?.Address
-            </option>
-            @foreach (var address in addresses)
-            {
-                <option value="@address">@address</option>
-            }
-
-        </select>
-    </div>
+   
 
     <div class="form-group">
         <label for="email">Email address</label>
-        <input type="email" class="form-control" id="email" value= "@Model?.Email" aria-describedby="emailHelp"  name = "Email" placeholder="Enter email">
-        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        <input  class="form-control"  asp-for="Email" aria-describedby="emailHelp"  placeholder="Enter email">
     </div>
     <div class="form-group">
         <label for="Image">Image linke</label>
-        <input type="url" value="@Model?.Image"  class="form-control" id="Image" name="Image" required>
+        <input  class="form-control"  asp-for="Image"  required>
     </div>
 
     <div class="form-group">
@@ -69,7 +56,7 @@
         @for (var i = 0 ; i < Model.Courses.Count() ; i++)
         {
 
-            <input class="form-check-input" type="checkbox" id="flexCheckDefault" asp-for="Courses[i].IsSelected" " ) />
+            <input class="form-check-input" type="checkbox" id="flexCheckDefault" asp-for="Courses[i].IsSelected"  ) />
             <label class="form-check-label" for="flexCheckDefault">
                 @Model.Courses[i].Name 
             </label>

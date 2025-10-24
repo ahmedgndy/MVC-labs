@@ -21,7 +21,7 @@ public class StudentController(StudentRepository Srepo , CourseRepository Course
     
     {
         var Courses = Courserepo.GetAllCourses();
-        var model = new StudentVM();
+        var model = new Stduent();
          List<CourseCheckBox> checkedcoursed = [] ;
         foreach(var course in Courses)
         {
@@ -36,12 +36,31 @@ public class StudentController(StudentRepository Srepo , CourseRepository Course
 
 
     [HttpPost]
-    public IActionResult AddnewStudent(StudentVM studentvm)
+    public IActionResult AddnewStudent(Stduent studentvm)
     {
         if (studentvm.Name is not null) {
             Srepo.Add(studentvm);
             return RedirectToAction("Index");
         }
         return View("Add",studentvm);
+    }
+
+    [HttpGet]
+    public IActionResult Edit(int id )
+    {
+        var student = Srepo.GetSudentByID(id); //tracked
+        if(student is null)
+        {
+               return NotFound();
+        } 
+        return View(student);
+    }
+
+    [HttpPost]
+    public IActionResult Edit(Student student)
+    {
+         Srepo.Edit(student);
+      
+        return RedirectToAction("Index");
     }
 }
