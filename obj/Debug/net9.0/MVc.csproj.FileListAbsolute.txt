@@ -554,3 +554,13 @@ C:\Users\El-Wattaneya\Desktop\WebApplication1\obj\Debug\net9.0\compressed\q4aufi
 C:\Users\El-Wattaneya\Desktop\WebApplication1\obj\Debug\net9.0\compressed\uczf3h1w6v-wvublzrdv8.gz
 C:\Users\El-Wattaneya\Desktop\WebApplication1\obj\Debug\net9.0\compressed\p2eyudvv39-5cl6jzyzps.gz
 C:\Users\El-Wattaneya\Desktop\WebApplication1\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
+C:\Users\El-Wattaneya\Desktop\WebApplication1\obj\Debug\net9.0\compressed\b2c9ywdo44-ag7o75518u.gz
+C:\Users\El-Wattaneya\Desktop\WebApplication1\obj\Debug\net9.0\compressed\3d2b9yo0mg-ag7o75518u.gz
+C:\Users\El-Wattaneya\Desktop\WebApplication1\obj\Debug\net9.0\compressed\5tcads92na-0i3buxo5is.gz
+C:\Users\El-Wattaneya\Desktop\WebApplication1\obj\Debug\net9.0\compressed\z238d3bfuc-o1o13a6vjx.gz
+C:\Users\El-Wattaneya\Desktop\WebApplication1\obj\Debug\net9.0\compressed\kwc80mvyxf-ttgo8qnofa.gz
+C:\Users\El-Wattaneya\Desktop\WebApplication1\obj\Debug\net9.0\compressed\xtuy3t6j13-2z0ns9nrw6.gz
+C:\Users\El-Wattaneya\Desktop\WebApplication1\obj\Debug\net9.0\compressed\qf9g95kpg3-muycvpuwrr.gz
+C:\Users\El-Wattaneya\Desktop\WebApplication1\obj\Debug\net9.0\compressed\dp1z9wum2f-87fc7y1x7t.gz
+C:\Users\El-Wattaneya\Desktop\WebApplication1\obj\Debug\net9.0\compressed\dga1f3l1dj-03hjc8e09r.gz
+C:\Users\El-Wattaneya\Desktop\WebApplication1\obj\Debug\net9.0\compressed\qt613dgzjc-48y08845bh.gz

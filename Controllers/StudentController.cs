@@ -1,66 +1,115 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using MVc.Context;
+using MVc.Enums;
 using MVc.Models;
-using MVc.Repositories;
+using MVc.Services;
 using MVc.ViewModels;
 
 namespace MVc.Controllers;
-
-public class StudentController(StudentRepository Srepo , CourseRepository Courserepo) : Controller
+public class StudentController : Controller
 {
-    
-    public IActionResult Index()
-    {
-  
-      List<Student> students = Srepo.GetSudents();
-      
-      return View(students); //helper methoud
-    }
+    private readonly IStudentService _studentService;
+    private readonly SchoolContext _context;
 
-   public IActionResult Add()
-    
+
+    public StudentController(IStudentService studentService, SchoolContext context)
     {
-        var Courses = Courserepo.GetAllCourses();
-        var model = new Stduent();
-         List<CourseCheckBox> checkedcoursed = [] ;
-        foreach(var course in Courses)
-        {
-            var checkBox = new CourseCheckBox();
-            checkBox.Id = course.Id;
-            checkBox.Name = course.Name;
-            checkedcoursed.Add(checkBox);
-        }
-        model.Courses = checkedcoursed;
-        return View(model);
+        _studentService = studentService;
+        _context = context;
     }
 
 
-    [HttpPost]
-    public IActionResult AddnewStudent(Stduent studentvm)
+    // GET: Student
+    public async Task<IActionResult> Index()
     {
-        if (studentvm.Name is not null) {
-            Srepo.Add(studentvm);
-            return RedirectToAction("Index");
-        }
-        return View("Add",studentvm);
+        var students = await _studentService.GetAllAsync();
+        return View(students);
     }
 
-    [HttpGet]
-    public IActionResult Edit(int id )
+
+    // GET: Student/Details/5
+    public async Task<IActionResult> Details(int id)
     {
-        var student = Srepo.GetSudentByID(id); //tracked
-        if(student is null)
-        {
-               return NotFound();
-        } 
+        var student = await _studentService.GetByIdAsync(id);
+        if (student == null) return NotFound();
         return View(student);
     }
 
-    [HttpPost]
-    public IActionResult Edit(Student student)
+
+    // GET: Student/Create
+    public async Task<IActionResult> Create()
     {
-         Srepo.Edit(student);
-      
-        return RedirectToAction("Index");
+        ViewBag.Departments = await _context.Departments.ToListAsync();
+        return View("create");
+    }
+
+
+    // POST: Student/Create
+    [HttpPost]
+    [ValidateAntiForgeryToken]
+    public async Task<IActionResult> Create(Student student)
+    {
+        if (!ModelState.IsValid)
+        {
+            ViewBag.Departments = await _context.Departments.ToListAsync();
+            return View(student);
+        }
+
+
+        await _studentService.CreateAsync(student);
+        return RedirectToAction(nameof(Index));
+    }
+
+
+    
+    // GET: Student/Edit/5
+    public async Task<IActionResult> Edit(int id)
+    {
+        var student = await _studentService.GetByIdAsync(id);
+        if (student == null) return NotFound();
+        ViewBag.Departments = await _context.Departments.ToListAsync();
+        return View(student);
+    }
+
+    // POST: Student/Edit/5
+    [HttpPost]
+    [ValidateAntiForgeryToken]
+    public async Task<IActionResult> Edit(int id, Student student)
+    {
+        
+        Console.WriteLine(student.Id);
+        Console.WriteLine("aakdfdjalkfj;asfjas;kfasdf");
+        if (id != student.Id) return BadRequest();
+        if (!ModelState.IsValid)
+        {
+            ViewBag.Departments = await _context.Departments.ToListAsync();
+            return View(student);
+        }
+
+
+        await _studentService.UpdateAsync(student);
+        return RedirectToAction(nameof(Index));
+    }
+
+
+    // GET: Student/Delete/5
+    public async Task<IActionResult> Delete(int id)
+    {
+        var student = await _studentService.GetByIdAsync(id);
+        if (student == null) return NotFound();
+        return View(student);
+    }
+
+
+    // POST: Student/Delete/5
+    [HttpPost, ActionName("Delete")]
+    [ValidateAntiForgeryToken]
+    public async Task<IActionResult> DeleteConfirmed(int id)
+    {
+        await _studentService.DeleteAsync(id);
+        return RedirectToAction(nameof(Index));
     }
 }

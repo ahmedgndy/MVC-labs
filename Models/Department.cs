@@ -7,13 +7,12 @@ namespace MVc.Models;
 public class Department
 {
 
-    public Guid Id { get; set; } = Guid.NewGuid();
-    public string Name { get; set; }
-    public String Manager { get; set; }
+    public int Id { get; set; }
 
-    public Branch Branche { get; set; }
+    [Required, StringLength(100)]
+    public string Name { get; set; } = null!;
 
-    public List<Student> Students { get; set; }
-
-    public List<Instructor> Instructors { get; set; } 
+    // Navigation
+    public ICollection<Student> Students { get; set; } = new List<Student>();
 }
+

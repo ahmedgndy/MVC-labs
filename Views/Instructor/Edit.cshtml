@@ -1,0 +1,61 @@
+﻿@model Instructor
+@using MVc.Models
+@using Microsoft.AspNetCore.Mvc.Rendering
+
+@{
+    ViewData["Title"] = "Edit Instructor";
+    // ViewBag.Courses => IEnumerable<Course>
+    // ViewBag.SelectedCourseIds => int[] (selected)
+    // ViewBag.OfficeLocation => string
+    var selected = (ViewBag.SelectedCourseIds as int[]) ?? new int[0];
+}
+
+<h1>Edit Instructor</h1>
+
+<form asp-action="Edit" method="post">
+    <input type="hidden" asp-for="Id" />
+    <div class="mb-3">
+        <label asp-for="Name" class="form-label"></label>
+        <input asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="HireDate" class="form-label"></label>
+        <input asp-for="HireDate" class="form-control" type="date" />
+        <span asp-validation-for="HireDate" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Office Location (leave empty to remove)</label>
+        <input name="officeLocation" class="form-control" value="@(ViewBag.OfficeLocation ?? string.Empty)" />
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Assigned Courses</label>
+        <div>
+            @if (ViewBag.Courses != null)
+            {
+                foreach (var c in (IEnumerable<Course>)ViewBag.Courses)
+                {
+                    var isChecked = selected.Contains(c.Id) ? "checked" : "";
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="selectedCourses" value="@c.Id" id="course_@c.Id" @isChecked />
+                        <label class="form-check-label" for="course_@c.Id">@c.Name</label>
+                    </div>
+                }
+            }
+            else
+            {
+                <p class="text-muted">No courses available.</p>
+            }
+        </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Save</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

@@ -1,0 +1,53 @@
+﻿@using MVc.Models
+@model Course
+@{
+    ViewData["Title"] = "Edit Course";
+    var selected = (ViewBag.SelectedInstructorIds as int[]) ?? new int[0];
+}
+<h1>Edit Course</h1>
+
+<form asp-action="Edit" method="post">
+    <input type="hidden" asp-for="Id" />
+    <div class="mb-3">
+        <label asp-for="Name" class="form-label"></label>
+        <input asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Credits" class="form-label"></label>
+        <input asp-for="Credits" class="form-control" type="number" min="0" max="30" />
+        <span asp-validation-for="Credits" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Assign Instructors</label>
+        <div>
+            @if (ViewBag.Instructors != null)
+            {
+                foreach (var i in (IEnumerable<Instructor>)ViewBag.Instructors)
+                {
+                    var isChecked = selected.Contains(i.Id) ? "checked" : "";
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="selectedInstructors" value="@i.Id" id="instr_@i.Id" @isChecked />
+                        <label class="form-check-label" for="instr_@i.Id">@i.Name</label>
+                    </div>
+                }
+            }
+            else
+            {
+
+                <p class="text-muted">No instructors available.</p>
+            }
+        </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Save</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+</form>
+
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+    <partial name="_ValidationJqueryScriptsPartail" />
+}

@@ -1,0 +1,33 @@
+﻿@using MVc.Models
+@model Instructor
+
+@{
+    ViewData["Title"] = "Delete Instructor";
+}
+
+<h1>Delete Instructor</h1>
+
+<h4>Are you sure you want to delete this instructor?</h4>
+
+<div>
+    <h5>@Model.Name</h5>
+    <p><strong>Hire Date:</strong> @Model.HireDate.ToString("yyyy-MM-dd")</p>
+    <p><strong>Office:</strong> @Model.OfficeAssignment?.Location</p>
+    <p>
+        <strong>Assigned courses:</strong>
+        @if (Model.CourseInstructors != null && Model.CourseInstructors.Any())
+        {
+            @string.Join(", ", Model.CourseInstructors.Select(ci => ci.Course?.Name ?? ""))
+        }
+        else
+        {
+            <span class="text-muted">None</span>
+        }
+    </p>
+
+    <form asp-action="DeleteConfirmed" method="post">
+        <input type="hidden" asp-for="Id" />
+        <button type="submit" class="btn btn-danger">Delete</button>
+        <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+    </form>
+</div>

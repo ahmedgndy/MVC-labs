@@ -1,0 +1,45 @@
+﻿@using MVc.Models
+@model IEnumerable<Instructor>
+
+@{
+    ViewData["Title"] = "Instructors";
+}
+
+<h1>Instructors</h1>
+
+<p>
+    <a class="btn btn-primary" asp-action="Create">Create New Instructor</a>
+</p>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(m => m.First().Name)</th>
+            <th>@Html.DisplayNameFor(m => m.First().HireDate)</th>
+            <th>Office</th>
+            <th>Courses</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var instr in Model)
+        {
+            <tr>
+                <td>@instr.Name</td>
+                <td>@(instr.HireDate.ToString("yyyy-MM-dd"))</td>
+                <td>@instr.OfficeAssignment?.Location</td>
+                <td>
+                    @if (instr.CourseInstructors != null && instr.CourseInstructors.Any())
+                    {
+                        @string.Join(", ", instr.CourseInstructors.Select(ci => ci.Course?.Name ?? ""))
+                    }
+                </td>
+                <td>
+                    <a class="btn btn-sm btn-info" asp-action="Details" asp-route-id="@instr.Id">Details</a>
+                    <a class="btn btn-sm btn-warning" asp-action="Edit" asp-route-id="@instr.Id">Edit</a>
+                    <a class="btn btn-sm btn-danger" asp-action="Delete" asp-route-id="@instr.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

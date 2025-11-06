@@ -1,6 +1,10 @@
 using Microsoft.Data.SqlClient;
+using Microsoft.EntityFrameworkCore;
 using MVc.Context;
+using MVc.Filters;
+using MVc.Middlewares;
 using MVc.Repositories;
+using MVc.Services;
 
 namespace WebApplication1
 {
@@ -10,37 +14,57 @@ namespace WebApplication1
 
         public static void Main(string[] args)
         {
+
+
             var builder = WebApplication.CreateBuilder(args);
 
-            // Add services to the container. ID
-            builder.Services.AddControllersWithViews();
-            builder.Services.AddSingleton<SchoolContext, SchoolContext>();
-            builder.Services.AddScoped<StudentRepository, StudentRepository>();
-            builder.Services.AddSingleton<CourseRepository, CourseRepository>();
 
+            // Add services to the container.
+            builder.Services.AddControllersWithViews(options =>
+            {
+                options.Filters.Add(typeof(ActionLoggingFilter));
+            });
+
+
+            builder.Services.AddSingleton<SchoolContext>();
+
+            // Register services
+            builder.Services.AddScoped<IStudentService, StudentService>();
 
 
             var app = builder.Build();
 
+
             // Configure the HTTP request pipeline.
             if (!app.Environment.IsDevelopment())
-
             {
                 app.UseExceptionHandler("/Home/Error");
-                // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
-                app.UseHsts();
             }
+
+
             app.UseStaticFiles();
-            app.UseHttpsRedirection();
+
+
             app.UseRouting();
 
-            app.UseAuthorization();
 
-            app.MapStaticAssets();
-            app.MapControllerRoute(
+            // Custom middleware that logs each request URL
+            app.UseMiddleware<RequestLoggingMiddleware>();
+
+
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapControllerRoute(
+                name: "studentDetails",
+                pattern: "Student/Details/{id:int}",
+                defaults: new { controller = "Student", action = "Details" });
+
+
+                endpoints.MapControllerRoute(
                 name: "default",
-                pattern: "{controller=Home}/{action=Index}/{id?}")
-                .WithStaticAssets();
+                pattern: "{controller=Home}/{action=Index}/{id?}");
+            });
+
 
             app.Run();
         }

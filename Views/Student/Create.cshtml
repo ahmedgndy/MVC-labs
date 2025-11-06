@@ -1,0 +1,22 @@
+﻿@using MVc.Enums
+@using MVc.Models
+@using MVc.ViewModels
+
+
+
+@model Student
+@{
+ViewData["Title"] = "Create Student";
+}
+<h1>Create Student</h1>
+<form asp-action="Create" method="post" enctype="multipart/form-data">
+
+	<partial name="_CreateEiditPV" model="Model" />
+
+<button class="btn btn-primary" type="submit">Create</button>
+<a class="btn btn-secondary" href="/Student">Cancel</a>
+</form>
+
+<partial name="_ValidationJqueryScriptsPartail" />
+
+

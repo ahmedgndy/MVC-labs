@@ -5,14 +5,18 @@ namespace MVc.Models;
 
 public class Course
 {
-    
-    public Guid Id { get; set; } = Guid.NewGuid();
-    public string Name { get; set; }
 
-    public string topic { get; set; }
-    public int Degree { get; set; }
-    public float MinDegree {  get; set; }
+    public int Id { get; set; }
 
-    public List<StudentCourseGrade> studentCourseGrades { get; set; }
+    [Required, StringLength(150)]
+    public string Name { get; set; } = null!;
+
+    [Range(0, 30)]
+    public int Credits { get; set; }
+
+    // Navigation
+    public ICollection<Enrollment> Enrollments { get; set; } = new List<Enrollment>();
+    public ICollection<CourseInstructor>? CourseInstructors { get; set; }
+
 
 }

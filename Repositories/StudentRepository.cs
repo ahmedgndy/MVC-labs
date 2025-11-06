@@ -1,57 +1,75 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using MVc.Context;
 using MVc.Models;
+using MVc.Services;
 using MVc.ViewModels;
+using NuGet.Versioning;
 using System.Runtime.CompilerServices;
 
 namespace MVc.Repositories;
-
-public class StudentRepository(SchoolContext context )
+public class StudentService : IStudentService
 {
-   public Student GetSudentByID(int id)
+    private readonly SchoolContext _context;
+
+
+    public StudentService(SchoolContext context)
     {
-        var student = context.Students.FirstOrDefault( s => s.Id == id );
-        if (student == null) {
-            throw new Exception($"Can not find student with id {id}");
-        }
-        return student;
+        _context = context;
     }
 
-   public List<Student> GetSudents()
+
+    public async Task<List<Student>> GetAllAsync()
     {
-        var students = context.Students.ToList();
-        if (students.Count == 0)
+        return await _context.Students.Include(s => s.Department).ToListAsync();
+    }
+
+
+    public async Task<Student> GetByIdAsync(int id)
+    {
+        return await _context.Students
+        .Include(s => s.Department)
+        .Include(s => s.Enrollments)
+        .FirstOrDefaultAsync(s => s.Id == id);
+    }
+
+
+    public async Task CreateAsync(Student student)
+    {
+        _context.Students.Add(student);
+        await _context.SaveChangesAsync();
+    }
+
+
+    public async Task UpdateAsync(Student studentDto)
+    {
+        var existing = await _context.Students
+                                        .Include(s => s.Attendances) // if you need the collection
+                                        .Include(s => s.Enrollments)   // if you need the collection    
+                                        .FirstOrDefaultAsync(s => s.Id == studentDto.Id);
+
+        if (existing == null) return; // or throw
+
+        // Map only the properties you want to update
+        existing.Name = studentDto.Name;
+        existing.Email = studentDto.Email;
+        existing.DateOfBirth = studentDto.DateOfBirth;
+        existing.DepartmentId = studentDto.DepartmentId;
+
+        // Carefully update navigation collections instead of replacing them:
+        // sync attendances individually (add/remove/update) rather than existing.Attendances = studentDto.Attendances
+
+        await _context.SaveChangesAsync();
+    }
+
+
+    public async Task DeleteAsync(int id)
+    {
+        var s = await _context.Students.FindAsync(id);
+        if (s != null)
         {
-            throw new Exception($"Can not find student with id ");
+            _context.Students.Remove(s);
+            await _context.SaveChangesAsync();
         }
-        Console.WriteLine(students.Count);
-        return students;
-    }
-
-    
-    public void Add(Stduent studentvm)
-    {
-        var studetn = Stduent.ToModel(studentvm);
-        context.Add<Student>(studetn);
-        context.SaveChanges();
-    }
-
-    public void Edit(Student updatedStudent)
-    {
-      if (updatedStudent == null) {
-            throw new Exception("Student object is null");
-      }
-      var existing = context.Students.FirstOrDefault(s => updatedStudent.Id == s.Id);
-      if (existing is null) return;
-        existing.Name = updatedStudent.Name;
-        existing.Address = updatedStudent.Address;
-        existing.Age = updatedStudent.Age;
-        existing.Image = updatedStudent.Image;
-        existing.Email = updatedStudent.Email;
-        context.SaveChanges();
-    }
-
-    public List<Department> GetDepartments() {
-       return context.Departments.ToList();
     }
 }

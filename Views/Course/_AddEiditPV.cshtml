@@ -1,0 +1,31 @@
+﻿@* @using MVc.Models
+@model Course
+<input type="hidden" asp-for="Id" />
+
+<div class="form-group row mb-3">
+    <label asp-for="Name" class="col-sm-2 col-form-label"></label>
+    <div class="col-sm-10">
+        <input asp-for="Name" class="form-control" />
+    </div>
+</div>
+
+<div class="form-group row mb-3">
+    <label asp-for="topic" class="col-sm-2 col-form-label"></label>
+    <div class="col-sm-10">
+        <input asp-for="topic" class="form-control" />
+    </div>
+</div>
+
+<div class="form-group row mb-3">
+    <label asp-for="Degree" class="col-sm-2 col-form-label"></label>
+    <div class="col-sm-10">
+        <input asp-for="Degree" type="number" class="form-control" />
+    </div>
+</div>
+
+<div class="form-group row mb-3">
+    <label asp-for="MinDegree" class="col-sm-2 col-form-label"></label>
+    <div class="col-sm-10">
+        <input asp-for="MinDegree" type="number" step="0.01" class="form-control" />
+    </div>
+</div> *@

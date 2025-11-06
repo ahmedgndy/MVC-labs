@@ -6,18 +6,19 @@ namespace MVc.Models;
 
 public class Instructor
 {
-    [Key]
-    public Guid Id { get; set; } = Guid.NewGuid();
+    public int Id { get; set; }
 
+
+    [Required]
+    [StringLength(100)]
     public string Name { get; set; }
-    public int Age { get; set; }
-    public decimal Salary { get; set; }
-    public string Email { get; set; }
-    public string Phone { get; set; }
-    public string Address { get; set; }
 
 
-    public DateTime HireDate { get; set; } 
+    [DataType(DataType.Date)]
+    public DateTime HireDate { get; set; }
 
-    public List<Course> Courses { get; set; }
+
+    public OfficeAssignment? OfficeAssignment { get; set; }
+    public ICollection<CourseInstructor>? CourseInstructors { get; set; }
 }
+
